@@ -1,0 +1,6 @@
+[package]
+name = "fanout-fanin"
+version = "0.1.0"
+authors = ["tmtmtoo <tmtmt2209@gmail.com>"]
+
+[dependencies]
