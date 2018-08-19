@@ -6,7 +6,7 @@ An implementation with the following model.
                                      +------------------+
                                      | Transform        |
                                      +------------------+
-                               +-----> ()        String +----+
+                               +-----> Instant   String +----+
         +-----------------+    |     |                  |    |    +-----------------+
         | Source          |    |     |     Counter      |    |    | Sink            |
         +-----------------+    |     |                  |    |    +-----------------+

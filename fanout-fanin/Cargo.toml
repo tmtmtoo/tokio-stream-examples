@@ -4,3 +4,8 @@ version = "0.1.0"
 authors = ["tmtmtoo <tmtmt2209@gmail.com>"]
 
 [dependencies]
+tokio = "0.1.7"
+futures = "0.1.23"
+tokio-timer = "0.2.4"
+tokio-codec = "0.1.0"
+tokio-fs = "0.1.3"
