@@ -3,7 +3,7 @@ use std::time::{Duration, Instant};
 use tokio::prelude::*;
 use tokio_timer::Interval;
 
-pub fn new(
+pub fn timer(
     basis: Instant,
     interval_millis: u64,
 ) -> impl Stream<Item = Instant, Error = RuntimeError> {
