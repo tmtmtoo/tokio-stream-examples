@@ -3,7 +3,7 @@ use std::time::Instant;
 use tokio::prelude::*;
 use utils::stream::connect;
 
-pub fn counter() -> (
+pub fn new() -> (
     impl Sink<SinkItem = Instant, SinkError = RuntimeError>,
     impl Stream<Item = String, Error = RuntimeError>,
 ) {
@@ -19,19 +19,5 @@ pub fn counter() -> (
                 format!("count: {}", count)
             }
         }),
-    )
-}
-
-pub fn elapsed_time(
-    basis: Instant,
-) -> (
-    impl Sink<SinkItem = Instant, SinkError = RuntimeError>,
-    impl Stream<Item = String, Error = RuntimeError>,
-) {
-    let (input, output) = connect::<Instant>();
-
-    (
-        input,
-        output.map(move |t: Instant| format!("elapsed time: {:?}", t.duration_since(basis))),
     )
 }
